@@ -9,8 +9,8 @@ namespace mddPostFetcher
     {
         private Uri _postUri;
         private Uri _commentUri;
-        public IEnumerable<PostModel> _posts;
-        public IEnumerable<CommentModel> _comments;
+        private IEnumerable<PostModel> _posts;
+        private IEnumerable<CommentModel> _comments;
 
         static readonly HttpClient client = new HttpClient();
         public URLPostDataFetcher(string commentURL, string postURL)
