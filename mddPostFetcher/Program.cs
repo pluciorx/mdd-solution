@@ -7,7 +7,7 @@ namespace mddPostFetcher
     {
         static async Task Main(string[] args)
         {
-            Console.WriteLine("Hello, mdd !");
+            Console.WriteLine("Hello, .mdd !");
             var commentURL = "https://jsonplaceholder.typicode.com/comments";
             var postURL = "https://jsonplaceholder.typicode.com/posts";
             
