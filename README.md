@@ -1,5 +1,5 @@
 # mdd-solution
-Test for mdd
+Test for .mdd
 Pod poniższymi adresami API znajduje się testowa lista postów oraz przypisanych do nich komentarzy.
 https://jsonplaceholder.typicode.com/posts
 https://jsonplaceholder.typicode.com/comments
