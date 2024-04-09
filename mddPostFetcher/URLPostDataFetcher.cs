@@ -52,7 +52,7 @@ namespace mddPostFetcher
         }
 
         public async Task<ICollection<PostModel>> GetPostWithCommentsLinqAsync()
-        {
+        {            
             if (_posts == null) await FetchPostsAsync();
             if (_comments == null) await FetchCommentsAsync();
 
@@ -65,7 +65,7 @@ namespace mddPostFetcher
                Comments = _comments.Where(c=> p.Id ==c.PostId)
             });
 
-            return _posts.ToList();
+            return res.ToList();
         }
     }
 }
