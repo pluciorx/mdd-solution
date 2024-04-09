@@ -19,7 +19,7 @@ namespace mddPostFetcher
             Debug.Assert(sut != null);
             Debug.Assert(sut.Count() == 100);
             
-            postFetcher
+            
             var sut2 = await postFetcher.GetPostWithCommentsLinqAsync();
 
             Debug.Assert(sut2 != null);
