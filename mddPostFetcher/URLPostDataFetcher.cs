@@ -1,13 +1,7 @@
 ﻿using mddPostFetcher.Interfaces;
 using mddPostFetcher.Models;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Net.Http.Json;
-using System.Runtime.Intrinsics.Arm;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace mddPostFetcher
 {
@@ -21,7 +15,6 @@ namespace mddPostFetcher
         static readonly HttpClient client = new HttpClient();
         public URLPostDataFetcher(string commentURL, string postURL)
         {
-           
             if (!Uri.TryCreate(commentURL, UriKind.Absolute, out _commentUri)
                 && (_commentUri.Scheme == Uri.UriSchemeHttp || _commentUri.Scheme == Uri.UriSchemeHttps)) throw new ArgumentException("Invalid Comment URL provided");
 
@@ -73,7 +66,6 @@ namespace mddPostFetcher
             });
 
             return _posts.ToList();
-
         }
     }
 }
