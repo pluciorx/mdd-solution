@@ -23,14 +23,14 @@ namespace mddPostFetcher
 
         }
 
-        public async Task<IEnumerable<CommentModel>> FetchCommentsAsync()
+        private async Task<IEnumerable<CommentModel>> FetchCommentsAsync()
         {
             if (_commentUri == null) throw new ArgumentException("Comment Uri not constructed");
             _comments = await client.GetFromJsonAsync<List<CommentModel>>(_commentUri);
             return _comments;
         }
 
-        public async Task<IEnumerable<PostModel>> FetchPostsAsync()
+        private async Task<IEnumerable<PostModel>> FetchPostsAsync()
         {
             if (_postUri == null) throw new ArgumentException("Post Uri not constructed");         
             _posts =  await client.GetFromJsonAsync<List<PostModel>>(_postUri);
